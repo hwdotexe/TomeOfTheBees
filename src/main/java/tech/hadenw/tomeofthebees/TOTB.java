@@ -19,7 +19,7 @@ public class TOTB extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new BeeListener(this), this);
 
         // Register commands.
-        this.getCommand("bees").setExecutor(new BeesCommand());
+        this.getCommand("bees").setExecutor(new BeesCommand(this));
     }
 
     public void onDisable(){

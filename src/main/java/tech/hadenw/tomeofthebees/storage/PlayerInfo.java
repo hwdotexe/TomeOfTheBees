@@ -32,4 +32,12 @@ public class PlayerInfo {
 
         return false;
     }
+
+    public void addEffect(EffectType t){
+        _effects.add(t);
+    }
+
+    public void removeEffect(EffectType t){
+        _effects.remove(t);
+    }
 }
