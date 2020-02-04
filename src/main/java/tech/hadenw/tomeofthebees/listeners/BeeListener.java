@@ -1,15 +1,21 @@
 package tech.hadenw.tomeofthebees.listeners;
 
+import org.bukkit.Material;
+import org.bukkit.block.BlockFace;
 import org.bukkit.entity.Bee;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.block.Action;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityTargetLivingEntityEvent;
+import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
+import tech.hadenw.tomeofthebees.ItemFactory;
 import tech.hadenw.tomeofthebees.TOTB;
 import tech.hadenw.tomeofthebees.storage.EffectType;
+import tech.hadenw.tomeofthebees.tasks.SpawnBeesTask;
 
 import java.util.Collections;
 import java.util.List;
@@ -55,6 +61,20 @@ public class BeeListener implements Listener {
                     if(bee.getTarget() != p){
                         bee.setTarget(p);
                     }
+                }
+            }
+        }
+    }
+
+    @EventHandler
+    public void onPlayerUseJarOfBees(PlayerInteractEvent e){
+        if(e.getAction() == Action.RIGHT_CLICK_BLOCK){
+            if(e.getPlayer().getInventory().getItemInMainHand().isSimilar(ItemFactory.getJarOfBees())){
+                if(e.getClickedBlock().getRelative(BlockFace.UP).getType()== Material.AIR) {
+                    e.getPlayer().getInventory().remove(e.getPlayer().getInventory().getItemInMainHand());
+
+                    // Spawn bees at the location.
+                    new SpawnBeesTask(e.getClickedBlock().getRelative(BlockFace.UP).getLocation()).runTaskTimer(plugin, 0, 10);
                 }
             }
         }
