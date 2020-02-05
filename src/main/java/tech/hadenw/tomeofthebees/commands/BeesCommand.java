@@ -25,6 +25,8 @@ public class BeesCommand implements CommandExecutor {
                         "&e=====[ &6&lBEES &e]=====\n" +
                         "&f/bees getJar\n" +
                         "/bees addStatus <player> <status>\n" +
+                        "/bees clearStatuses <player>\n" +
+                        "/bees listStatuses" +
                         "&e=================="));
             }else if(args.length == 1 && args[0].equalsIgnoreCase("getJar")){
                 if(sender instanceof Player) {
@@ -32,6 +34,27 @@ public class BeesCommand implements CommandExecutor {
                     sender.sendMessage("Please accept this small jar of bees.");
                 } else {
                     sender.sendMessage("Sorry mate, you gotta have hands to throw a JAR OF BEEEES!");
+                }
+            }else if(args.length == 1 && args[0].equalsIgnoreCase("listStatuses")) {
+                StringBuilder sb = new StringBuilder();
+
+                for(EffectType et : EffectType.values()){
+                    if(sb.length() > 0){
+                        sb.append(", ");
+                    }
+
+                    sb.append(et.name());
+                }
+
+                sender.sendMessage("Valid effect types are: "+sb.toString());
+            }else if(args.length == 2 && args[0].equalsIgnoreCase("clearStatuses")) {
+                Player op = Bukkit.getPlayer(args[1]);
+
+                if(op != null){
+                    plugin.getStorage().getPlayerInfo(op.getUniqueId().toString()).removeEffects();
+                    sender.sendMessage("The player has been cured.");
+                }else{
+                    sender.sendMessage("Player not found :[");
                 }
             }else if(args.length == 3 && args[0].equalsIgnoreCase("addStatus")){
                 Player op = Bukkit.getPlayer(args[1]);

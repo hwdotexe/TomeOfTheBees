@@ -40,4 +40,8 @@ public class PlayerInfo {
     public void removeEffect(EffectType t){
         _effects.remove(t);
     }
+
+    public void removeEffects(){
+        _effects.clear();
+    }
 }
