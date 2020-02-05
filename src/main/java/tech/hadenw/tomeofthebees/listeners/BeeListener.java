@@ -31,9 +31,11 @@ public class BeeListener implements Listener {
     public void onBeeTargetPlayer(EntityTargetLivingEntityEvent e){
         if(e.getEntity() instanceof Bee && e.getTarget() instanceof Player) {
             Player p = (Player) e.getTarget();
+            Bee bee = (Bee)e.getEntity();
 
             if (plugin.getStorage().getPlayerInfo(p.getUniqueId().toString()).hasEffect(EffectType.QUEEN_BEE)) {
                 e.setCancelled(true);
+                bee.setAnger(0);
             }
         }
     }
@@ -60,6 +62,7 @@ public class BeeListener implements Listener {
 
                     if(bee.getTarget() != p){
                         bee.setTarget(p);
+                        bee.setAnger(1200);
                     }
                 }
             }
