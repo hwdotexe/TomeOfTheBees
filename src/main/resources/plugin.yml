@@ -3,3 +3,5 @@ version: v1.0
 api-version: 1.13
 main: tech.hadenw.tomeofthebees.TOTB
 author: Cynicalvoe
+commands:
+  bees:
