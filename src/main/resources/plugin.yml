@@ -5,3 +5,10 @@ main: tech.hadenw.tomeofthebees.TOTB
 author: Cynicalvoe
 commands:
   bees:
+permissions:
+  bees.use:
+    default: op
+  bees.jar:
+    default: op
+  bees.status:
+    default: op
