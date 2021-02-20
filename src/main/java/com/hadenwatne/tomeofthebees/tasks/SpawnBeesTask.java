@@ -1,4 +1,4 @@
-package tech.hadenw.tomeofthebees.tasks;
+package com.hadenwatne.tomeofthebees.tasks;
 
 import org.bukkit.Location;
 import org.bukkit.entity.EntityType;

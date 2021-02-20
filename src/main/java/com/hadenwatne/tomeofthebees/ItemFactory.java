@@ -1,4 +1,4 @@
-package tech.hadenw.tomeofthebees;
+package com.hadenwatne.tomeofthebees;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Color;

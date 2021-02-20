@@ -1,5 +1,7 @@
-package tech.hadenw.tomeofthebees.listeners;
+package com.hadenwatne.tomeofthebees.listeners;
 
+import com.hadenwatne.tomeofthebees.storage.EffectType;
+import com.hadenwatne.tomeofthebees.tasks.SpawnBeesTask;
 import org.bukkit.Material;
 import org.bukkit.block.BlockFace;
 import org.bukkit.entity.Bee;
@@ -12,13 +14,8 @@ import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityTargetLivingEntityEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
-import tech.hadenw.tomeofthebees.ItemFactory;
-import tech.hadenw.tomeofthebees.TOTB;
-import tech.hadenw.tomeofthebees.storage.EffectType;
-import tech.hadenw.tomeofthebees.tasks.SpawnBeesTask;
-
-import java.util.Collections;
-import java.util.List;
+import com.hadenwatne.tomeofthebees.ItemFactory;
+import com.hadenwatne.tomeofthebees.TOTB;
 
 public class BeeListener implements Listener {
     private TOTB plugin;

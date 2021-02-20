@@ -1,4 +1,4 @@
-package tech.hadenw.tomeofthebees.storage;
+package com.hadenwatne.tomeofthebees.storage;
 
 public enum EffectType {
     ALLERGY,

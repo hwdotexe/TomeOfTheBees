@@ -1,7 +1,7 @@
-package tech.hadenw.tomeofthebees.storage;
+package com.hadenwatne.tomeofthebees.storage;
 
 import com.google.gson.Gson;
-import tech.hadenw.tomeofthebees.TOTB;
+import com.hadenwatne.tomeofthebees.TOTB;
 
 import java.io.File;
 import java.io.FileInputStream;

@@ -1,7 +1,7 @@
 name: TomeOfTheBees
-version: v1.0
+version: v1.0.1
 api-version: 1.13
-main: tech.hadenw.tomeofthebees.TOTB
+main: com.hadenwatne.tomeofthebees.TOTB
 author: Cynicalvoe
 commands:
   bees:

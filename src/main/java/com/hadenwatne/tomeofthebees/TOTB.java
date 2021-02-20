@@ -1,11 +1,11 @@
-package tech.hadenw.tomeofthebees;
+package com.hadenwatne.tomeofthebees;
 
+import com.hadenwatne.tomeofthebees.commands.BeesCommand;
+import com.hadenwatne.tomeofthebees.listeners.BeeListener;
+import com.hadenwatne.tomeofthebees.storage.PlayerInfo;
+import com.hadenwatne.tomeofthebees.storage.StorageController;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
-import tech.hadenw.tomeofthebees.commands.BeesCommand;
-import tech.hadenw.tomeofthebees.listeners.BeeListener;
-import tech.hadenw.tomeofthebees.storage.PlayerInfo;
-import tech.hadenw.tomeofthebees.storage.StorageController;
 
 public class TOTB extends JavaPlugin {
     // TODO jar of bees

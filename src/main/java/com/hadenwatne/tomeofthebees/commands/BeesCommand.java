@@ -1,15 +1,15 @@
-package tech.hadenw.tomeofthebees.commands;
+package com.hadenwatne.tomeofthebees.commands;
 
+import com.hadenwatne.tomeofthebees.storage.EffectType;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import tech.hadenw.tomeofthebees.BeePermissions;
-import tech.hadenw.tomeofthebees.ItemFactory;
-import tech.hadenw.tomeofthebees.TOTB;
-import tech.hadenw.tomeofthebees.storage.EffectType;
+import com.hadenwatne.tomeofthebees.BeePermissions;
+import com.hadenwatne.tomeofthebees.ItemFactory;
+import com.hadenwatne.tomeofthebees.TOTB;
 
 public class BeesCommand implements CommandExecutor {
     private TOTB plugin;

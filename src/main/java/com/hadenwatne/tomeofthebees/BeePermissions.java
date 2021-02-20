@@ -1,4 +1,4 @@
-package tech.hadenw.tomeofthebees;
+package com.hadenwatne.tomeofthebees;
 
 public enum BeePermissions {
     RUN_COMMAND ("bees.use"),
